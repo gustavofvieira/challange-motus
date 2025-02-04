@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Develop.Store.Domain\Develop.Store.Domain.csproj" />
+    <ProjectReference Include="..\Develop.Store.Infra.Setup\Develop.Store.Infra.Setup.csproj" />
+  </ItemGroup>
+
+</Project>
