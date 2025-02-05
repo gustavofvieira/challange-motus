@@ -18,7 +18,18 @@ namespace Develop.Store.Infra.Data.Repositories
             _context = context;
         }
 
-        public async Task AddProduct(Product product) => await _context.Products.InsertOneAsync(product);
-        public async Task<Product> GetProductById(Guid id) => await _context.Products.AsQueryable().Where(p => p.Id == id).FirstOrDefaultAsync();
+        public async Task CreateProduct(Product product) => await _context.Products.InsertOneAsync(product);
+        public async Task<Product> GetProductById(Guid id) => await _context.Products.AsQueryable().FirstOrDefaultAsync(u => u.Id == id);
+        public async Task RemoveProduct(Guid id) => await _context.Products.DeleteOneAsync(c => c.Id.Equals(id));
+        public async Task UpdateProduct(Product product) =>
+            await _context.Products.FindOneAndUpdateAsync(
+                u => u.Id.Equals(product.Id),
+                Builders<Product>.Update.Combine(
+                    Builders<Product>.Update.Set(c => c.Name, product.Name),
+                    Builders<Product>.Update.Set(c => c.Value, product.Value),
+                    Builders<Product>.Update.Set(c => c.Canceled, product.Canceled),
+                    Builders<Product>.Update.Set(c => c.Value, product.Value),
+                    Builders<Product>.Update.Set(c => c.UpdatedAt, DateTime.UtcNow)
+                ));
     }
 }

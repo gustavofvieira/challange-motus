@@ -15,19 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{41014CA2-25C0-4A8D-8215-56691EAAE817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Develop.Store.Web.Api", "Develop.Store.Web.Api\Develop.Store.Web.Api.csproj", "{C5836739-26F4-4A14-B9E8-B6C04F3F2792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Develop.Store.Web.Api", "Develop.Store.Web.Api\Develop.Store.Web.Api.csproj", "{C5836739-26F4-4A14-B9E8-B6C04F3F2792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Develop.Store.Services", "Develop.Store.Services\Develop.Store.Services.csproj", "{D5C2F6E1-26CB-4FDB-B6DE-7B73F383105C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Develop.Store.Services", "Develop.Store.Services\Develop.Store.Services.csproj", "{D5C2F6E1-26CB-4FDB-B6DE-7B73F383105C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Develop.Store.Domain", "Develop.Store.Domain\Develop.Store.Domain.csproj", "{4A53A2EC-9CBD-4866-8E32-E9ACEA5A5EA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Develop.Store.Domain", "Develop.Store.Domain\Develop.Store.Domain.csproj", "{4A53A2EC-9CBD-4866-8E32-E9ACEA5A5EA0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{D634B0E8-8108-4636-A90D-041F48FCE961}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - Setup", "5.2 - Setup", "{EA3A3411-8B44-4242-AB84-76253C5B9A35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Develop.Store.Infra.Data", "Develop.Store.Infra.Data\Develop.Store.Infra.Data.csproj", "{F11B76C2-D145-421B-9A70-DED2ECA19574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Develop.Store.Infra.Data", "Develop.Store.Infra.Data\Develop.Store.Infra.Data.csproj", "{F11B76C2-D145-421B-9A70-DED2ECA19574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Develop.Store.Infra.Setup", "Develop.Store.Infra.Setup\Develop.Store.Infra.Setup.csproj", "{5360428D-5598-4EA3-B822-13130AA3A610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Develop.Store.Infra.Setup", "Develop.Store.Infra.Setup\Develop.Store.Infra.Setup.csproj", "{5360428D-5598-4EA3-B822-13130AA3A610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Develop.Store.Tests", "Develop.Store.Tests\Develop.Store.Tests.csproj", "{1A35E14E-C756-40FB-B461-CFFA67B2A108}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{5360428D-5598-4EA3-B822-13130AA3A610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5360428D-5598-4EA3-B822-13130AA3A610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5360428D-5598-4EA3-B822-13130AA3A610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A35E14E-C756-40FB-B461-CFFA67B2A108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A35E14E-C756-40FB-B461-CFFA67B2A108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A35E14E-C756-40FB-B461-CFFA67B2A108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A35E14E-C756-40FB-B461-CFFA67B2A108}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{EA3A3411-8B44-4242-AB84-76253C5B9A35} = {8B3EDD69-A336-4D48-BE77-F0E8B518B55D}
 		{F11B76C2-D145-421B-9A70-DED2ECA19574} = {D634B0E8-8108-4636-A90D-041F48FCE961}
 		{5360428D-5598-4EA3-B822-13130AA3A610} = {EA3A3411-8B44-4242-AB84-76253C5B9A35}
+		{1A35E14E-C756-40FB-B461-CFFA67B2A108} = {41014CA2-25C0-4A8D-8215-56691EAAE817}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14EB8AA4-5841-453C-A3C9-2D9E9AE6235A}

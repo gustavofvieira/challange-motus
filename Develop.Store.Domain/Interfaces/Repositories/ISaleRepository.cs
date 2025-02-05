@@ -1,10 +1,10 @@
-﻿using Develop.Store.Domain.Models;
+﻿using Develop.Store.Domain.DTO;
 using System.Threading.Tasks;
 
 namespace Develop.Store.Domain.Interfaces.Repositories
 {
     public interface ISaleRepository
     {
-        Task AddSale(Sale sale);
+        Task AddSaleDto(SaleDTO saleDto);
     }
 }

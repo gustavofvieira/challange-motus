@@ -45,7 +45,6 @@ namespace Develop.Store.Infra.Setup
         private void ConfigureValidators(IServiceCollection services)
         {
             services.AddScoped<IValidator<ProductDTO>, ProductDTOValidator>();
-
         }
     }
 }

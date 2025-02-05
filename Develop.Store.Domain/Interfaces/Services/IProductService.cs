@@ -6,7 +6,9 @@ namespace Develop.Store.Domain.Interfaces.Services
 {
     public interface IProductService
     {
-        Task AddProduct(Product product);
+        Task CreateProduct(Product product);
         Task<Product> GetProductById(Guid id);
+        Task UpdateProduct(Product product);
+        Task RemoveProduct(Guid id);
     }
 }

@@ -12,6 +12,7 @@ namespace Develop.Store.Domain.Models
         public string Name { get; set; }
         public double Value { get; set; }
         public bool Canceled { get; set; } = false;
-        public DateTime RegisterDate { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

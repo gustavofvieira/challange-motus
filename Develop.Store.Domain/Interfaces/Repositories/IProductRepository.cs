@@ -6,7 +6,9 @@ namespace Develop.Store.Domain.Interfaces.Repositories
 {
     public interface IProductRepository
     {
-        Task AddProduct(Product product);
+        Task CreateProduct(Product product);
         Task<Product> GetProductById(Guid id);
+        Task RemoveProduct(Guid id);
+        Task UpdateProduct(Product product);
     }
 }

@@ -2,6 +2,7 @@
 using Develop.Store.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -16,14 +17,40 @@ namespace Develop.Store.Web.Api.Controllers
         {
             _productService = productService;
         }
-              
+
         [HttpPost]
-        [Route("add-product")]
+        [Route("create-product")]
         [AllowAnonymous]
-        public async Task<ActionResult<string>> AddSale([FromBody] Product product)
+        public async Task<ActionResult<string>> CreateProduct([FromBody] Product Product)
         {
-            await _productService.AddProduct(product);
-            return Ok(JsonSerializer.Serialize("Account created with success!"));
+            await _productService.CreateProduct(Product);
+            return Ok(JsonSerializer.Serialize("Product created with success!"));
+        }
+
+        [HttpGet]
+        [Route("get-product-by-id/{id}")]
+        [AllowAnonymous]
+        public async Task<ActionResult<Product>> GetProductById([FromRoute] Guid id)
+        {
+            return Ok(await _productService.GetProductById(id));
+        }
+
+        [HttpPut]
+        [Route("update-product")]
+        [AllowAnonymous]
+        public async Task<ActionResult<string>> UpdateProduct([FromBody] Product Product)
+        {
+            await _productService.UpdateProduct(Product);
+            return Ok(JsonSerializer.Serialize("Product updated with success!"));
+        }
+
+        [HttpDelete]
+        [Route("remove-product/{id}")]
+        [AllowAnonymous]
+        public async Task<ActionResult<string>> RemoveProduct([FromRoute] Guid id)
+        {
+            await _productService.RemoveProduct(id);
+            return Ok(JsonSerializer.Serialize("Product removed with success!"));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Develop.Store.Domain.Models;
+﻿using Develop.Store.Domain.DTO;
+using Develop.Store.Domain.Models;
 using MongoDB.Driver;
 
 namespace Develop.Store.Infra.Data.Context
@@ -12,5 +13,6 @@ namespace Develop.Store.Infra.Data.Context
         public IMongoCollection<Product> Products => Database.GetCollection<Product>("Products");
         public IMongoCollection<Customer> Customers => Database.GetCollection<Customer>("Customers");
         public IMongoCollection<Sale> Sales => Database.GetCollection<Sale>("Sales");
+        public IMongoCollection<SaleDTO> SalesDto => Database.GetCollection<SaleDTO>("Sales");
     }
 }

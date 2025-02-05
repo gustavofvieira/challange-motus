@@ -10,7 +10,9 @@ namespace Develop.Store.Domain.Validations
             RuleFor(x => x.Quantities)
                 .NotNull()
                 .LessThan(20)
-                .WithMessage("Allowed only until twenty items");
+                .WithMessage("Allowed only until twenty items")
+                .GreaterThan(1)
+                .WithMessage("select at least one item");
         }
     }
 }

@@ -12,5 +12,6 @@ namespace Develop.Store.Domain.Models
         public string Name { get; set; } = string.Empty;
         public DateTime Birthdate { get; set; }
         public string Document { get; set; } = string.Empty;
+        public DateTime UpdatedAt { get; set; }
     }
 }
